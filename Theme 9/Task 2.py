@@ -8,3 +8,17 @@
 """
 
 
+n = int(input())
+array = [['.'] * n for i in range(n)]
+
+for i in range(n):
+    array[i][n // 2] = '*'
+    array[n // 2][i] = '*'
+    array[i][i] = '*'
+    array[i][n - i - 1] = '*'
+
+for row in array:
+    for element in row:
+        print(element, end=' ')
+    print()
+
