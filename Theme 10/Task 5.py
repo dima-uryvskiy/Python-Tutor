@@ -13,3 +13,14 @@
 а затем сами элементы, отсортированные по возрастанию.
 """
 
+
+n, m = input().split()
+a = set(int(input()) for i in range(int(n)))
+b = set(int(input()) for i in range(int(m)))
+
+print(len(a.intersection(b)))
+print(* sorted(a.intersection(b)))
+print(len(a - b))
+print(* sorted(a - b))
+print(len(b - a))
+print(* sorted(b - a))
