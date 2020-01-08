@@ -25,3 +25,4 @@ for value in result:
 
 print(len(set(language)), *sorted(set(language)), sep='\n')
 print(len(set(result)), *sorted(set(result)), sep='\n')
+

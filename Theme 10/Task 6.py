@@ -14,3 +14,4 @@ for i in range(n):
         result.add(value)
 
 print(len(result))
+

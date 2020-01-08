@@ -26,3 +26,4 @@ while input_str != 'HELP':
     input_str = input()
 
 print(* result)
+
