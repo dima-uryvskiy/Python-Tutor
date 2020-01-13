@@ -19,3 +19,4 @@ for key, value in dict_word.items():
         print(key)
     elif key == word:
         print(value)
+
