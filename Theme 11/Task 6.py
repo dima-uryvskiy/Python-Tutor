@@ -13,6 +13,11 @@
 """
 
 
+dict_word = {}
+for i in range(int(input())):
+    for value in input().split():
+        dict_word[value] = dict_word.get(value, 0) + 1
 
-
+for value in sorted(dict_word.items(), key=lambda x: (-x[1], x[0])):
+    print(value[0])
 
