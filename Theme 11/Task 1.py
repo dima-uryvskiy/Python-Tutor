@@ -9,10 +9,7 @@
 
 dict_word = dict()
 for value in input().split():
-    if value in dict_word.keys():
-        dict_word[value] += 1
-    else:
-        dict_word[value] = 0
-    print(dict_word[value], end=' ')
+    dict_word[value] = dict_word.get(value, 0) + 1
+    print(dict_word[value] - 1, end=' ')
 
 

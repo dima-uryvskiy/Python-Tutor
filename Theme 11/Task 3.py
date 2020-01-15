@@ -15,10 +15,7 @@
 dict_result = {}
 for i in range(int(input())):
     person, vote = input().split()
-    if person in dict_result.keys():
-        dict_result[person] += int(vote)
-    else:
-        dict_result[person] = int(vote)
+    dict_result[person] = dict_result.get(person, 0) + int(vote)
 
 for key, value in sorted(dict_result.items()):
     print(key, value)

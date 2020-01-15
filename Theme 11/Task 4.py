@@ -10,10 +10,7 @@ dict_word = {}
 for i in range(int(input())):
     string = input()
     for word in string.split():
-        if word in dict_word.keys():
-            dict_word[word] += 1
-        else:
-            dict_word[word] = 0
+        dict_word[word] = dict_word.get(word, 0) + 1
 
 for key, value in sorted(dict_word.items()):
     if value >= max(dict_word.values()) and key <= max(dict_word.keys()):
