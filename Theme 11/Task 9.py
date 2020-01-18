@@ -19,18 +19,3 @@
 В частности, первым должен идти перевод лексикографически минимального латинского слова, далее — второго в этом порядке
 и т.д. Внутри перевода английские слова должны быть также отсортированы лексикографически.
 """
-
-
-dict_result = {}
-for i in range(int(input())):
-    word, translate = input().split(' - ')
-    for value in translate.split(', '):
-        if value not in dict_result.keys():
-            dict_result[value] = [word]
-        else:
-            dict_result[value].append(word)
-
-print(len(dict_result))
-for key, value in sorted(dict_result.items()):
-    print(key + ' - ' + ', '.join(value))
-
