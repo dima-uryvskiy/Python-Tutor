@@ -17,7 +17,22 @@
 словаре также лексикографический.
 Выведите соответствующий данному латинско-английский словарь, в точности соблюдая формат входных данных.
 В частности, первым должен идти перевод лексикографически минимального латинского слова, далее — второго в этом порядке
-и т.д. Внутри перевода английские слова должны быть также отсортированы лексикографически.
+и т.д. Внутри перевода английские слова должны быть также отсортированы лексикографически.R
 """
 
 
+dict_result = {}
+for i in range(int(input())):
+    word, translate = input().split('-')
+    word = word.replace(' ', '')
+    for value in translate.split(','):
+        value = value.strip()
+        if value not in dict_result.keys():
+            dict_result[value] = [word]
+        else:
+            dict_result[value].append(word)
+
+print(len(dict_result))
+for key, value in sorted(dict_result.items()):
+    print(key + ' - ', end='')
+    print(*value, sep=', ')
