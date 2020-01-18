@@ -23,10 +23,8 @@
 
 dict_result = {}
 for i in range(int(input())):
-    word, translate = input().split('-')
-    word = word.replace(' ', '')
-    for value in translate.split(','):
-        value = value.strip()
+    word, translate = input().split(' - ')
+    for value in translate.split(', '):
         if value not in dict_result.keys():
             dict_result[value] = [word]
         else:
@@ -34,5 +32,5 @@ for i in range(int(input())):
 
 print(len(dict_result))
 for key, value in sorted(dict_result.items()):
-    print(key + ' - ', end='')
-    print(*value, sep=', ')
+    print(key + ' - ' + ', '.join(value))
+
