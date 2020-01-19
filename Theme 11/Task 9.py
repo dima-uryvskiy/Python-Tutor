@@ -33,9 +33,9 @@
 
 
 words = {input(): 0 for i in range(int(input()))}
-words_lower = {key.lower(): 0 for key in words.keys()}
 word_check = input().split()
 count_error = 0
+
 for value in word_check:
     count_symbol = 0
     for symbol in value:
@@ -44,7 +44,7 @@ for value in word_check:
     if count_symbol != 1:
         count_error += 1
     else:
-        if value.lower() in words_lower.keys() and value not in words.keys():
+        if value.lower() in [key.lower() for key in words.keys()] and value not in words.keys():
             count_error += 1
 
 print(count_error)
