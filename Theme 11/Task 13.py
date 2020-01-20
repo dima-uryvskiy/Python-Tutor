@@ -33,3 +33,4 @@ for i in range(int(input()) - 1):
 for j in range(int(input())):
     people_fist, people_second = input().split()
     print(find_family(people_fist, people_second))
+
